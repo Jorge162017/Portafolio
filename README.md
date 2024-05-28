@@ -3,7 +3,6 @@
 Portafolio desarrollado con react y vite
 
 
-
 ### Features
 
 - Fully Responsive
@@ -28,6 +27,6 @@ Listo, ahora corre esto:
 <pre>npm install</pre>
 <pre>npm run dev<</pre>
 
-### Thanks
+### Gracias
 
-If you like this portfolio don't forget give it a ⭐ 
+Si te gusto el portafolio no olvides darle una ⭐ 
