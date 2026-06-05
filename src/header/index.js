@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./style.css";
-import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { logotext ,socialprofils } from "../content_option";
 import Themetoggle from "../components/themetoggle";
@@ -20,10 +19,10 @@ const Headermain = () => {
           <Link  className="navbar-brand nav_ac" to="/">
             {logotext}
           </Link>
-          <div className="d-flex align-items-center">
+          <div className="d-flex align-items-center gap-3">
           <Themetoggle />
           <button className="menu__button  nav_ac" onClick={handleToggle}>
-            {!isActive ? <VscClose /> : <VscGrabber />}
+            MENU
           </button>
           
           </div>
@@ -38,13 +37,13 @@ const Headermain = () => {
                   <Link  onClick={handleToggle} to="/" className="my-3">Home</Link>
                   </li>
                   <li className="menu_item">
-                    <Link  onClick={handleToggle} to="/portfolio" className="my-3"> Portafolio</Link>
+                    <Link  onClick={handleToggle} to="/portfolio" className="my-3"> Portfolio</Link>
                   </li>
                   <li className="menu_item">
-                  <Link onClick={handleToggle} to="/about" className="my-3">Acerca de mi</Link>
+                  <Link onClick={handleToggle} to="/about" className="my-3">About</Link>
                   </li>
                   <li className="menu_item">
-                  <Link onClick={handleToggle} to="/contact" className="my-3"> Contactame</Link>
+                  <Link onClick={handleToggle} to="/contact" className="my-3"> Contact</Link>
                   </li>
                 </ul>
               </div>
@@ -52,9 +51,8 @@ const Headermain = () => {
           </div>
           <div className="menu_footer d-flex flex-column flex-md-row justify-content-between align-items-md-center position-absolute w-100 p-3">
             <div className="d-flex">
-            <a href={socialprofils.facebook}>Facebook</a>
             <a href={socialprofils.github}>Github</a>
-            <a href={socialprofils.twitter}>Twitter</a>
+            <a href={socialprofils.linkedin}>LinkedIn</a>
             </div>
             <p className="copyright m-0">copyright __ {logotext}</p>
           </div>

@@ -8,7 +8,7 @@ section {
 }
 
 .who_am_I {
-    font-family: Cinzel;
+    font-family: 'Playfair Display', serif;
 }
 
 .has-first-color {
@@ -17,7 +17,14 @@ section {
 
 .btn-portfolio {
     background: var(--primary-color);
-    border-radius: 0;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-portfolio:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
 }
 
 .btn-portfolio a {
@@ -35,6 +42,7 @@ section {
     min-height: 700px;
     height: 100vh;
     margin-top: -60px;
+    animation: fadeInUp 0.8s ease-out;
 }
 
 @media (max-width:991.98px) {
@@ -81,9 +89,29 @@ section {
 }
 
 .intro_sec .text h1 {
-    font-size: 30px;
-    margin-bottom: 50px;
+    font-size: 3.5rem;
+    margin-bottom: 32px;
     font-weight: 700;
+    animation: slideInLeft 0.6s ease-out;
+}
+
+.hero_subtitle {
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 12px 0 24px;
+    animation: slideInLeft 0.6s ease-out 0.1s both;
+    font-size: 1.25rem;
+}
+
+.intro_btn-action {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    animation: slideInLeft 0.6s ease-out 0.2s both;
+}
+
+.intro_btn-action a {
+    text-decoration: none;
 }
 
 .intro_sec .text h3 {
@@ -96,18 +124,78 @@ section {
     background-position: center;
     min-height: 700px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+}
+
+.profile_panel {
+    width: min(72%, 420px);
+    border: 2px solid var(--secondary-color);
+    padding: 42px;
+    background: var(--bg-color);
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: float 3s ease-in-out infinite;
+}
+
+.profile_panel:hover {
+    box-shadow: 0 20px 50px rgba(204, 0, 0, 0.15);
+    border-color: rgba(204, 0, 0, 0.4);
+}
+
+.profile_panel .profile_kicker {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    color: #dd1e1e;
+    opacity: 1;
+}
+
+.profile_panel h3 {
+    font-size: 32px;
+    line-height: 1.15;
+    margin-bottom: 28px;
+    font-family: 'Playfair Display', serif;
+}
+
+.profile_panel ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.profile_panel li {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 14px 0;
+    transition: all 0.3s ease;
+}
+
+.profile_panel li:hover {
+    padding-left: 8px;
+    border-top-color: var(--text-color-3);
 }
 
 .ac_btn {
-    padding: 4px 19px;
+    padding: 12px 28px;
     color: var(--secondary-color);
     position: relative;
     border: var(--secondary-color) 2px solid;
     overflow: hidden;
     transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
     cursor: pointer;
-    border-radius: 0;
-    margin-right: 20px;
+    border-radius: 8px;
+    margin-right: 0;
+    margin-bottom: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: transparent;
 }
 
 .ac_btn a {
@@ -183,13 +271,20 @@ section {
     width: 250px;
     height: 220px;
     border-radius: 100%;
-    /* mix-blend-mode: multiply; */
     background-color: #2f514e;
     z-index: 9999999999;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    animation: float 4s ease-in-out infinite;
+}
+
+.intro_sec .h_bg-image .block:hover {
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
 }
 
 @media (max-width:991.98px) {
@@ -213,6 +308,7 @@ section {
     color: var(--text-color);
     margin-bottom: 10px;
     display: block;
+    animation: float 3s ease-in-out infinite;
 }
 
 .intro_sec .h_bg-image .block h3 {
